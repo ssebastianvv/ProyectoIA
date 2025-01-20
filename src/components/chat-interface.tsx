@@ -228,6 +228,7 @@ export function ChatInterface() {
 
                 <div className="border-t p-4 bg-card">
                     <div className="max-w-4xl mx-auto relative flex gap-2">
+                        {/* Textarea para escribir el mensaje */}
                         <Textarea
                             value={input}
                             onChange={(e) => {
@@ -244,9 +245,11 @@ export function ChatInterface() {
                             className="resize-none"
                             rows={1}
                         />
+                        {/* Botón para enviar el mensaje */}
                         <Button onClick={handleSend}>
                             <Send className="h-4 w-4" />
                         </Button>
+                        {/* Sugerencias de comandos */}
                         {showSuggestions && (
                             <Card className="absolute bottom-full left-0 w-full mb-2">
                                 {SUGGESTIONS.map((suggestion, index) => (
