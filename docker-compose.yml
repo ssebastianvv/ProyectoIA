@@ -16,15 +16,5 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
-  app:
-    container_name: proyecto-ai
-    build: .
-    ports:
-      - "3000:3000"
-    environment:
-      DATABASE_URL: postgres://postgres:postgres@db:5432/proyecto-ai
-    depends_on:
-      - db
-
 volumes:
   postgres_data:
