@@ -10,6 +10,7 @@ import { Card } from "@/components/ui/card"
 import { MessageSquare, Send, ChevronRight, ChevronLeft, Plus, Settings, Moon, Sun } from 'lucide-react'
 import { cn } from "@/lib/utils"
 
+// Definición de interfaces para mensajes y conversaciones
 interface Message {
     id: number
     content: string
@@ -22,12 +23,14 @@ interface Conversation {
     messages: Message[]
 }
 
+// Conversaciones iniciales
 const INITIAL_CONVERSATIONS: Conversation[] = [
     { id: 1, title: "React Hooks", messages: [] },
     { id: 2, title: "CSS Grid", messages: [] },
     { id: 3, title: "TypeScript Basics", messages: [] },
 ]
 
+// Sugerencias de comandos
 const SUGGESTIONS = [
     "Explica useEffect en React",
     "Cómo crear un layout con CSS Grid",
@@ -35,6 +38,7 @@ const SUGGESTIONS = [
 ]
 
 export function ChatInterface() {
+    // Definición de estados
     const [conversations, setConversations] = useState<Conversation[]>(INITIAL_CONVERSATIONS)
     const [activeConversation, setActiveConversation] = useState<number>(1)
     const [input, setInput] = useState("")
@@ -44,10 +48,12 @@ export function ChatInterface() {
     const [isAiTyping, setIsAiTyping] = useState(false)
     const messagesEndRef = useRef<HTMLDivElement>(null)
 
+    // Efecto para desplazar la vista hacia el último mensaje
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
     }, [conversations])
 
+    // Efecto para manejar el modo oscuro basado en las preferencias del sistema
     useEffect(() => {
         const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
         setIsDarkMode(darkModeMediaQuery.matches)
@@ -58,10 +64,12 @@ export function ChatInterface() {
         return () => darkModeMediaQuery.removeEventListener('change', handleChange)
     }, [])
 
+    // Efecto para aplicar la clase 'dark' al elemento raíz del documento
     useEffect(() => {
         document.documentElement.classList.toggle('dark', isDarkMode)
     }, [isDarkMode])
 
+    // Función para enviar un mensaje
     const handleSend = () => {
         if (input.trim()) {
             const newMessage: Message = { id: Date.now(), content: input, isUser: true }
@@ -76,6 +84,7 @@ export function ChatInterface() {
             setShowSuggestions(false)
             setIsAiTyping(true)
 
+            // Simular respuesta de la IA
             setTimeout(() => {
                 const aiResponse: Message = {
                     id: Date.now() + 1,
@@ -94,10 +103,12 @@ export function ChatInterface() {
         }
     }
 
+    // Función para alternar el modo oscuro
     const toggleDarkMode = () => {
         setIsDarkMode(!isDarkMode)
     }
 
+    // Función para agregar una nueva conversación
     const addNewConversation = () => {
         const newConv: Conversation = {
             id: conversations.length + 1,
