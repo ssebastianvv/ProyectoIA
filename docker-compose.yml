@@ -1,0 +1,20 @@
+services:
+  db:
+    container_name: database
+    image: postgres:17
+    restart: always
+    environment:
+      # Database username
+      POSTGRES_USER: postgres
+      # Database password
+      POSTGRES_PASSWORD: postgres
+      # Database name
+      POSTGRES_DB: proyecto-ai
+    ports:
+      - "5432:5432"
+    # Use a named volume to persist PostgreSQL data
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
