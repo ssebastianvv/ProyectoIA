@@ -157,7 +157,7 @@ export default function Chat() {
               className="resize-none flex-grow"
               rows={2} // Definimos el tamaño del área de texto
             />
-            <Button className="bg-[#FCA311]" type="submit" disabled={loading} > {/* Botón para enviar mensajes */}
+            <Button className="bg-accent" type="submit" disabled={loading} > {/* Botón para enviar mensajes */}
               <SendHorizontal className="h-4 w-4 mr-2" />
               {loading ? "Enviando..." : "Enviar"}
             </Button>

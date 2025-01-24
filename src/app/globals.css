@@ -2,75 +2,128 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Estilos globales para el body */
 body {
-  /* color: var(--foreground);
-  background: var(--background); */
+  color: var(--foreground);
+  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Definición de variables CSS para colores y otros estilos */
 @layer base {
   :root {
     --background: 0 0% 100%;
+    /* Fondo blanco */
     --foreground: 224 71.4% 4.1%;
+    /* Texto oscuro */
     --card: 0 0% 100%;
+    /* Fondo de tarjetas blanco */
     --card-foreground: 224 71.4% 4.1%;
+    /* Texto oscuro en tarjetas */
     --popover: 0 0% 100%;
+    /* Fondo de popovers blanco */
     --popover-foreground: 224 71.4% 4.1%;
-    --primary: 220.9 39.3% 11%;
+    /* Texto oscuro en popovers */
+    --primary: 218 60% 15%;
+    /* Color primario azul oscuro (#14213D) */
     --primary-foreground: 210 20% 98%;
+    /* Texto claro en color primario */
     --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220.9 39.3% 11%;
+    /* Color secundario claro */
+    --secondary-foreground: 0 84.2% 60.2%;
+    /* Texto oscuro en color secundario */
     --muted: 220 14.3% 95.9%;
+    /* Color apagado claro */
     --muted-foreground: 220 8.9% 46.1%;
-    --accent: 220 14.3% 95.9%;
-    --accent-foreground: 220.9 39.3% 11%;
+    /* Texto apagado oscuro */
+    --accent: 36 96% 53%;
+    /* Color de acento amarillo (#FCA311) */
+    --accent-foreground: 0 0% 100%;
+    /* Texto blanco en color de acento */
     --destructive: 0 84.2% 60.2%;
+    /* Color destructivo rojo */
     --destructive-foreground: 210 20% 98%;
+    /* Texto claro en color destructivo */
     --border: 220 13% 91%;
+    /* Color de borde claro */
     --input: 220 13% 91%;
+    /* Color de fondo de input claro */
     --ring: 224 71.4% 4.1%;
+    /* Color de anillo oscuro */
     --chart-1: 12 76% 61%;
+    /* Color de gráfico 1 */
     --chart-2: 173 58% 39%;
+    /* Color de gráfico 2 */
     --chart-3: 197 37% 24%;
+    /* Color de gráfico 3 */
     --chart-4: 43 74% 66%;
+    /* Color de gráfico 4 */
     --chart-5: 27 87% 67%;
+    /* Color de gráfico 5 */
     --radius: 0.5rem;
+    /* Radio de borde */
   }
 
   .dark {
-    --background: 224 71.4% 4.1%;
+    --background: 218 60% 15%;
+    /* Fondo azul oscuro (#14213D) */
     --foreground: 210 20% 98%;
-    --card: 224 71.4% 4.1%;
+    /* Texto claro */
+    --card: 218 60% 15%;
+    /* Fondo de tarjetas azul oscuro */
     --card-foreground: 210 20% 98%;
-    --popover: 224 71.4% 4.1%;
+    /* Texto claro en tarjetas */
+    --popover: 218 60% 15%;
+    /* Fondo de popovers azul oscuro */
     --popover-foreground: 210 20% 98%;
-    --primary: 210 20% 98%;
-    --primary-foreground: 220.9 39.3% 11%;
+    /* Texto claro en popovers */
+    --primary: 36 96% 53%;
+    /* Color primario azul oscuro */
+    --primary-foreground: 210 20% 98%;
+    /* Texto claro en color primario */
     --secondary: 215 27.9% 16.9%;
+    /* Color secundario oscuro */
     --secondary-foreground: 210 20% 98%;
+    /* Texto claro en color secundario */
     --muted: 215 27.9% 16.9%;
+    /* Color apagado oscuro */
     --muted-foreground: 217.9 10.6% 64.9%;
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
+    /* Texto apagado claro */
+    --accent: 36 96% 53%;
+    /* Color de acento amarillo (#FCA311) */
+    --accent-foreground: 0 0% 100%;
+    /* Texto blanco en color de acento */
     --destructive: 0 62.8% 30.6%;
+    /* Color destructivo oscuro */
     --destructive-foreground: 210 20% 98%;
+    /* Texto claro en color destructivo */
     --border: 215 27.9% 16.9%;
+    /* Color de borde oscuro */
     --input: 215 27.9% 16.9%;
-    --ring: 216 12.2% 83.9%;
+    /* Color de fondo de input oscuro */
+    --ring: 0 0% 100%;
+    /* Color de anillo claro */
     --chart-1: 220 70% 50%;
+    /* Color de gráfico 1 */
     --chart-2: 160 60% 45%;
+    /* Color de gráfico 2 */
     --chart-3: 30 80% 55%;
+    /* Color de gráfico 3 */
     --chart-4: 280 65% 60%;
+    /* Color de gráfico 4 */
     --chart-5: 340 75% 55%;
+    /* Color de gráfico 5 */
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+    /* Aplica el color de borde a todos los elementos */
   }
 
   body {
     @apply bg-background text-foreground;
+    /* Aplica el fondo y el color de texto al body */
   }
 }
