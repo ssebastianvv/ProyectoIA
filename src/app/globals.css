@@ -4,9 +4,9 @@
 
 /* Estilos globales para el body */
 body {
-  color: var(--text-primary);
+  color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif --(text-primar);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Definición de variables CSS para colores y otros estilos */
