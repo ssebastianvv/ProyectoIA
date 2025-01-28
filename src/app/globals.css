@@ -4,9 +4,9 @@
 
 /* Estilos globales para el body */
 body {
-  color: var(--foreground);
+  color: var(--text-primary);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif --(text-primar);
 }
 
 /* Definición de variables CSS para colores y otros estilos */
@@ -36,8 +36,8 @@ body {
     /* Color apagado claro */
     --muted-foreground: 220 8.9% 46.1%;
     /* Texto apagado oscuro */
-    --accent: 36 96% 53%;
-    /* Color de acento amarillo (#FCA311) */
+    --accent: 218 60% 15%;
+    /* Color de acento azul (#14213D) */
     --accent-foreground: 0 0% 100%;
     /* Texto blanco en color de acento */
     --destructive: 0 84.2% 60.2%;

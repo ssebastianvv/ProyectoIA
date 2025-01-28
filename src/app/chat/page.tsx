@@ -67,24 +67,24 @@ export default function Chat() {
         )}
       >
         <div className="p-4 flex justify-between items-center border-b"> {/* Encabezado del historial */}
-          <h2 className="text-xl font-semibold">Historial</h2>
-          <Button variant="ghost" size="icon" onClick={() => setIsHistoryOpen(false)}>
-            <ChevronLeft className="h-4 w-4" />
+          <h2 className="text-xl  font-semibold text-foreground  ">Historial</h2>
+          <Button variant="ghost" size="icon" className="bg-accent" onClick={() => setIsHistoryOpen(false)}>
+            <ChevronLeft className="h-4 w-4 text-primary-foreground" />
           </Button>
         </div>
-        <div className="p-4"> {/* Botón para crear un nuevo historial */}
-          <Button variant="outline" className="w-full">
-            <Plus className="mr-2 h-4 w-4" /> Historial
+        <div className="p-4" > {/* Botón para crear un nuevo historial */}
+          <Button className="w-full bg-accent">
+            <Plus className="mr-2 h-4 w-4 " /> Historial
           </Button>
         </div>
         <ScrollArea className="h-[calc(100vh-8rem)]"> {/* Área para scroll del historial */}
-          <div className="p-4 space-y-2">
+          <div className="p-4 space-y-2 ">
             {/* Mostramos los mensajes del historial */}
             {chat
               .filter((msg) => msg.role === "user") // Filtramos solo mensajes del usuario
               .map((msg, index) => (
-                <Button key={index} variant="ghost" className="w-full justify-start text-left">
-                  <MessageSquare className="mr-2 h-4 w-4" />
+                <Button key={index} variant="ghost" className="w-full justify-start text-left  ">
+                  <MessageSquare className="mr-2 h-4 w-4  " />
                   {msg.content.substring(0, 20)}... {/* Mostramos los primeros 20 caracteres del mensaje */}
                 </Button>
               ))}
@@ -93,20 +93,20 @@ export default function Chat() {
       </aside>
 
       {/* Área principal del chat */}
-      <main className={cn("flex-1 flex flex-col transition-all duration-300", isHistoryOpen ? "ml-80" : "ml-0")}>
+      <main className={cn("flex-1 flex flex-col transition-all duration-300 ", isHistoryOpen ? "ml-80" : "ml-0")}>
         <header className="border-b p-4 flex justify-between items-center bg-card"> {/* Encabezado del chat */}
           {!isHistoryOpen && (
-            <Button variant="ghost" onClick={() => setIsHistoryOpen(true)}>
-              <ChevronRight className="h-4 w-4 mr-2" />
+            <Button variant="ghost" className="bg-accent text-primary-foreground" onClick={() => setIsHistoryOpen(true)}>
+              <ChevronRight className="h-4 w-4 mr-2 " />
               Historial
             </Button>
           )}
           <div className="flex items-center gap-2"> {/* Botones de modo oscuro y configuración */}
             <Button variant="ghost" size="icon" onClick={toggleDarkMode}>
-              {isDarkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+              {isDarkMode ? <Sun className="h-4 w-4 text-primary-foreground " /> : <Moon className="h-4 w-4 " />}
             </Button>
-            <Button variant="ghost" size="icon">
-              <Settings className="h-4 w-4" />
+            <Button variant="ghost" size="icon"  >
+              <Settings className="text-foreground h-4 w-4 " />
             </Button>
           </div>
         </header>
