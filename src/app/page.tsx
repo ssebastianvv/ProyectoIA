@@ -27,7 +27,7 @@ export default function Home() {
 
       <div className="flex-1 p-8 flex justify-end items-center overflow-hidden">
         <img
-          src="https://www.google.com/imgres?q=agricultura&imgurl=https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Felespectador%2F27J7GNALYVER7IIURFTFXENLRI.jpeg&imgrefurl=https%3A%2F%2Fwww.elespectador.com%2Fambiente%2Fpor-que-ha-fracasado-la-agricultura-en-colombia%2F&docid=KpJPprUZB0LWbM&tbnid=ld-8Dh0VyOf9IM&vet=12ahUKEwjW_OaRqqCLAxXfQjABHRnQIzMQM3oECH4QAA..i&w=657&h=438&hcb=2&ved=2ahUKEwjW_OaRqqCLAxXfQjABHRnQIzMQM3oECH4QAA"
+          src="https://www.seguritecnia.es/wp-content/uploads/2022/03/inteligencia-artificial-900x600.jpg"
           alt="Inteligencia Artificial"
           className="rounded-lg shadow-lg -mr-24 object-cover"
         />
